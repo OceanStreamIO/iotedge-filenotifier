@@ -1,0 +1,30 @@
+tmpdata
+rawdata
+.DS_Store
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# nyc test coverage
+.nyc_output
+# Dependency directories
+node_modules/
+.npm
+.eslintcache
+.node_repl_history
+# dotenv environment variables file
+.env
+
+config/app.conf.json
+raw_data/
+```

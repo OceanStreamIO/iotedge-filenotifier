@@ -1,0 +1,17 @@
+FROM node:16-alpine
+
+WORKDIR /app/
+
+COPY ./package*.json ./
+COPY ./lib ./lib
+COPY ./config ./config
+
+RUN npm install --production
+
+COPY ./app.js ./
+
+EXPOSE 9229
+
+USER node
+
+CMD ["node", "--inspect=0.0.0.0:9229", "app.js"]

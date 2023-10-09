@@ -1,0 +1,15 @@
+FROM arm32v7/node:16-slim
+
+WORKDIR /app/
+
+COPY ./package*.json ./
+COPY ./lib ./lib
+COPY ./config ./config
+
+RUN npm install --production
+
+COPY ./app.js ./
+
+USER node
+
+CMD ["node", "app.js"]

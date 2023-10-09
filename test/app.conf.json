@@ -1,0 +1,12 @@
+{
+  "__filename": "/Users/andrei/oceanstream/iotedge-echosounder/test/app.conf.json",
+  "RAW_DATA_FOLDER": "/Users/andrei/oceanstream/iotedge-echosounder/test/src/tmpdata",
+  "alertTimeDiff": 2000,
+  "alertSendingInterval": 1,
+  "alertSendingIntervalUnit": 1000,
+  "connectMaxTimeout": 500,
+  "connectMinTimeout": 100,
+  "filePollingInterval": 50,
+  "logLevel": "info",
+  "lastUpdateTime": 1696884131029
+}
