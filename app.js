@@ -40,30 +40,16 @@ Application.run({ Client }).then(client => {
       Logger.error(`Error: \n${util.inspect(err.message)}\n${err.stack}`);
     }
   });
-  /*
-  watcher.on('metadata', (metadata, filename) => {
-    const {Transceivers, Transducers} = metadata;
 
-    client.updateProperties({
-      [Application.PROPERTIES.EchosounderMetadata]: {
-        Transceivers: JSON.stringify(Transceivers),
-        Transducers: JSON.stringify(Transducers)
-      }
-    }).catch(err => {
-      Logger.warn(`Error sending metadata: \n${util.inspect(err.message)}\n${err.stack}`)
-    });
-  });
-  */
   watcher.on('fileadd', (filename, stats) => {
     if (Config.enableRawFileProcessing) {
-      Logger.debug(`Sending raw file ${filename} to Oceanstream processing module.`);
       const message = new Message(JSON.stringify({
         filename,
         continuous: Config.continuousProcessing || false,
         event: 'fileadd'
       }));
 
-      client.sendOutputEvent(message, {output: 'echosounder_rawfile'});
+      client.sendOutputEvent(message, {output: 'file_added'});
     } else {
       Logger.debug('Raw files processing via the Python module is not enabled.');
     }
