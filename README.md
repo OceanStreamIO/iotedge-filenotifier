@@ -7,8 +7,9 @@ File and directory notifier module for [OceanStream](https://oceanstream) data p
 The primary objective of the FileNotifier module is to:
 
 1. monitor specified folders for any file activities, specified by extension (by default `.raw` data files);
-2. dispatch state changes related to file and folder activities to the OceanStream platform for further processing and alerting;
-3. serve as a source of metadata and other relevant information related to the equipment operation.
+2. dispatch periodic state updates related to file and folder activities to the IoT Hub;
+3. idle detection based on file inactivity – if no file operations are detected within a predefined time interval (default 2 minutes), the system transitions to an "offline" state
+4. serve as a source of metadata and other relevant information related to the equipment operation.
 
 ## Parameters
 
