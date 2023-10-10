@@ -1,6 +1,6 @@
 # @oceanstream/filenotifier 
 
-File and directory filenotifier module for [OceanStream](https://oceanstream) data platform based on the Azure IoT Edge framework.
+File and directory notifier module for [OceanStream](https://oceanstream) data platform based on the Azure IoT Edge framework.
 
 ## Description
 
