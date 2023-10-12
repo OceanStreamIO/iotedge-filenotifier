@@ -49,6 +49,7 @@ Application.run({ Client }).then(client => {
         event: 'fileadd'
       }));
 
+      client.sendOutputEvent(message);
       client.sendOutputEvent(message, {output: 'file_added'});
     } else {
       Logger.debug('Raw files processing via the Python module is not enabled.');
