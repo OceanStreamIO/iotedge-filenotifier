@@ -11,11 +11,13 @@
     "test": "mocha test/src/"
   },
   "dependencies": {
-    "@pineview/iotedge-common": "^0.3.0",
+    "@pineview/iotedge-common": "0.3.1",
     "azure-iot-device": "^1.18.3",
     "chokidar": "^3.5.3",
+    "dotenv": "^16.4.5",
     "uuid": "^9.0.1",
-    "xml2js": "^0.6.2"
+    "xml2js": "^0.6.2",
+    "xstate": "^5.15.0"
   },
   "devDependencies": {
     "eslint": "^8.51.0",
@@ -36,9 +38,8 @@
     "module.json",
     "package.json",
     "package-lock.json",
-    "Dockerfile.amd64",
-    "Dockerfile.amd64.debug",
-    "Dockerfile.arm32v7",
-    "Dockerfile.arm32v7.debug"
+    "Dockerfile.Linux.amd64",
+    "Dockerfile.Linux.arm",
+    "Dockerfile.Linux.arm64"
   ]
 }
